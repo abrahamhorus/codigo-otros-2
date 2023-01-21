@@ -1,8 +1,8 @@
-var formulario = document.querySelector("#form")
+var formulario = document.getElementById("form")
 
-formulario.onsubmit = function(e) {
+formulario.onsubmit = function(event) {
 
-  e.prevent();
+  event.preventDefault();
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -10,6 +10,7 @@ formulario.onsubmit = function(e) {
 
   var nombre = n.value
   var edad = e.value
+  var nacionalidad = na.value
 
   var i = na.selectedIndex
   var nacionalidad = na.options[i].value
